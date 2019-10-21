@@ -5,9 +5,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-public class tigerFaceServer implements InitializingBean {
+public class TigerFaceServer implements InitializingBean {
 	@Override
 	public void afterPropertiesSet() throws Exception {
+		new Thread(() -> System.out.println("This is the thread class")).start();
 		System.out.println("---初始化---");
 	}
 }
