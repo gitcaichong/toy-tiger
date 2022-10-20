@@ -1,6 +1,5 @@
 package com.yaya.toytiger.controller;
 
-import lombok.extern.log4j.Log4j2;
 import org.apache.poi.xssf.usermodel.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +12,8 @@ import java.net.URLEncoder;
 
 @RestController
 @RequestMapping(value = "/excel")
-@Log4j2
 public class ExcelController {
+
 	//创建表头
 	private void createTitle(XSSFWorkbook workbook, XSSFSheet sheet){
 		XSSFRow row = sheet.createRow(0);
@@ -51,11 +50,10 @@ public class ExcelController {
 	//生成user表excel
 	@GetMapping(value = "/getUser")
 	public String getUser(HttpServletResponse response) throws Exception{
-		log.info("下载1");
 //		XSSFWorkbook workbook = new XSSFWorkbook();
-//		XSSFSheet sheet = workbook.createSheet("Sheet1");
+//		XSSFSheet sheet = workbook.createSheet("统计表");
 //		createTitle(workbook,sheet);
-//		String fileName = "导出Excel例子.xlsx";
+//		String fileName = "导出excel例子.xlsx";
 //
 //		//生成excel文件
 //		buildExcelFile(fileName, workbook);

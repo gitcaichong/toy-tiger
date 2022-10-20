@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 public class TigerFaceServer implements InitializingBean {
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		new Thread(() -> System.out.println("This is the thread class")).start();
 		System.out.println("---初始化---");
 	}
 }

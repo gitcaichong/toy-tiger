@@ -1,6 +1,20 @@
 server:
   port: 8080
-  servlet:
-    context-path: /yaya
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.88.131:3306/tiger
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.yaya.toytiger.entity
+
 logging:
-  com.level: info
+  level:
+    com:
+      yaya:
+        toytiger:
+          mapper: debug
